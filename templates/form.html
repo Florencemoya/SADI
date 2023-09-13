@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de Prédiction</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            max-width: 600px;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        label, input, select {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        input, select {
+            width: calc(100% - 22px);
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: #fff;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulaire de Prédiction</h1>
+    <form action="/predict" method="post">
+        <label for="sexe">Sexe (H/F)</label>
+        <select id="sexe" name="sexe" required>
+            <option value="H">Homme</option>
+            <option value="F">Femme</option>
+        </select><br><br>
+
+        <label for="etio">Etio</label>
+        <input type="text" id="etio" name="etio" required><br><br>
+
+        <label for="cv">CV</label>
+        <input type="text" id="cv" name="cv" required><br><br>
+
+        <label for="age">Age</label>
+        <input type="number" id="age" name="Age" required><br><br>
+
+        <label for="esterman">Esterman</label>
+        <input type="number" id="esterman" name="Esterman" required><br><br>
+
+        <label for="st">ST</label>
+        <input type="number" id="st" name="ST" required><br><br>
+
+        <label for="dt_centrale">DT_centrale</label>
+        <input type="number" id="dt_centrale" name="DT_centrale" required><br><br>
+
+        <label for="dt_quadsupd">DT_quadsupd</label>
+        <input type="number" id="dt_quadsupd" name="DT_quadsupd" required><br><br>
+
+        <label for="dt_quadsupg">DT_quadsupg</label>
+        <input type="number" id="dt_quadsupg" name="DT_quadsupg" required><br><br>
+
+        <label for="dt_quadinfg">DT_quadinfg</label>
+        <input type="number" id="dt_quadinfg" name="DT_quadinfg" required><br><br>
+
+        <label for="dt_quadinfd">DT_quadinfd</label>
+        <input type="number" id="dt_quadinfd" name="DT_quadinfd" required><br><br>
+
+        <label for="dt_dis_Centrale">DT_dis_Centrale</label>
+        <input type="number" id="dt_dis_Centrale" name="DT_dis_Centrale" required><br><br>
+
+        <label for="dt_dis_quadsupg">DT_dis_quadsupg</label>
+        <input type="number" id="dt_dis_quadsupg" name="DT_dis_quadsupg" required><br><br>
+
+        <label for="dt_dis_quadsupd">DT_dis_quadsupd</label>
+        <input type="number" id="dt_dis_quadsupd" name="DT_dis_quadsupd" required><br><br>
+
+        <label for="dt_dis_quadinfg">DT_dis_quadinfg</label>
+        <input type="number" id="dt_dis_quadinfg" name="DT_dis_quadinfg" required><br><br>
+
+        <label for="dt_dis_quadinfd">DT_dis_quadinfd</label>
+        <input type="number" id="dt_dis_quadinfd" name="DT_dis_quadinfd" required><br><br>
+
+        <input type="submit" value="Prédire">
+    </form>
+</body>
+</html>

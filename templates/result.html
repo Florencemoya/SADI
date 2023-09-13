@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <style>
+        form {
+            max-width: 600px;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        label, input, select {
+            display: block;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+
+        input, select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        /* Style pour la page de résultat */
+        .result-box {
+            max-width: 600px;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        .decision-non {
+            color: #FF0000; /* Rouge */
+        }
+
+        .decision-oui {
+            color: #008000; /* Vert */
+        }
+
+        .decision-simulateur {
+            color: #0000FF; /* Bleu */
+        }
+
+    </style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Résultat de la prédiction</title>
+</head>
+<body>
+    <h1>Résultat de la prédiction</h1>
+    <p>
+        {% if decision_conduite == 0 %}
+            La décision de conduite est : <span class="decision-non">non, vous ne pouvez pas conduire</span>
+        {% elif decision_conduite == 1 %}
+            La décision de conduite est : <span class="decision-oui">oui, vous pouvez conduire</span>
+        {% elif decision_conduite == 2 %}
+            La décision de conduite est : <span class="decision-simulateur">simulateur</span>
+        {% endif %}
+    </p>
+</body>
+</html>
